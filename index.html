@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Pronouns, Object Pronouns, Possessive Adjectives & Pronouns | i12 Speak English</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #54595F;
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        /* HEADER STYLES */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            margin-bottom: 0;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-name {
+            color: #0D214D;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        /* Desktop Navigation */
+        nav {
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #54595F;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #E62E3B;
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #0D214D;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .breadcrumbs {
+            font-size: 14px;
+            color: #54595F;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumbs a {
+            color: #0D214D;
+            text-decoration: none;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+        .level-badge {
+            display: inline-block;
+            background-color: #ffeaa7;
+            color: #f39c12;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #0D214D;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            color: #0D214D;
+            font-size: 20px;
+            margin-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        .section-instruction {
+            color: #54595F;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .question {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            border-left: 6px solid #ffc300;
+        }
+
+        .question-number {
+            color: #0D214D;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .question-text {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #54595F;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background-color: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option:hover {
+            border-color: #0D214D;
+            background-color: #f8f9fa;
+        }
+
+        .option input[type="radio"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .option input[type="radio"]:checked + span {
+            font-weight: bold;
+        }
+
+        .option:has(input[type="radio"]:checked) {
+            background-color: #ffeaa7;
+            border-color: #f39c12;
+        }
+
+        /* Correct and Incorrect answer highlighting */
+        .option.correct-answer {
+            background-color: #d4edda !important;
+            border-color: #28a745 !important;
+        }
+
+        .option.incorrect-answer {
+            background-color: #f8d7da !important;
+            border-color: #E62E3B !important;
+        }
+
+        select.correct-answer {
+            background-color: #d4edda !important;
+            border-color: #28a745 !important;
+        }
+
+        select.incorrect-answer {
+            background-color: #f8d7da !important;
+            border-color: #E62E3B !important;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+            color: #54595F;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #0D214D;
+        }
+
+        select option:checked {
+            background-color: #ffeaa7;
+            color: #f39c12;
+        }
+
+        select:valid {
+            background-color: #fffef7;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #fff3cd;
+            border-left: 4px solid #f39c12;
+            border-radius: 5px;
+        }
+
+        .explanation.show {
+            display: block;
+        }
+
+        .explanation strong {
+            color: #E62E3B;
+        }
+
+        .explanation .correct {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background-color: #0D214D;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1a3a6b;
+        }
+
+        #score {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0D214D;
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #0D214D;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-to-top:hover {
+            background-color: #1a3a6b;
+        }
+
+        .back-to-top.show {
+            display: flex;
+        }
+
+        /* Paragraph Section */
+        .paragraph-section {
+            background-color: #f0f8ff;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+            border-left: 6px solid #ffc300;
+        }
+
+        .paragraph-section h2 {
+            color: #0D214D;
+            margin-bottom: 20px;
+        }
+
+        .paragraph-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            line-height: 2;
+            font-size: 16px;
+        }
+
+        .paragraph-content p {
+            margin: 0;
+        }
+
+        .inline-select {
+            padding: 2px 5px;
+            font-size: 16px;
+            border: 1px solid #999;
+            border-radius: 3px;
+            background-color: white;
+            min-width: 70px;
+            height: 28px;
+        }
+
+        .inline-select.correct-answer {
+            background-color: #d4edda !important;
+            border-color: #28a745 !important;
+        }
+
+        .inline-select.incorrect-answer {
+            background-color: #f8d7da !important;
+            border-color: #E62E3B !important;
+        }
+
+        @media (max-width: 768px) {
+            /* Mobile Header Styles */
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: white;
+                z-index: 1000;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 80px 30px 30px;
+                gap: 0;
+            }
+
+            nav ul li {
+                width: 100%;
+                padding: 15px 0;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            nav a {
+                font-size: 18px;
+            }
+
+            .container {
+                padding: 20px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .question {
+                padding: 15px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <span class="site-name">i 1 2 Speak English</span>
+
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="listening.html">Listening</a></li>
+                    <li><a href="vocabulary.html">Vocabulary</a></li>
+                    <li><a href="grammar.html">Grammar</a></li>
+                    <li><a href="reading.html">Reading</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="level-badge">Level 1</div>
+        <h1>Subject Pronouns, Object Pronouns, Possessive Adjectives & Pronouns</h1>
+
+        <!-- Part 1: Multiple Choice -->
+        <h2 class="section-title">Part 1 - Multiple Choice (Questions 1-6)</h2>
+        <p class="section-instruction">Choose the correct option.</p>
+
+        <!-- Question 1 -->
+        <div class="question" data-question="1">
+            <div class="question-number">Question 1</div>
+            <div class="question-text">Emma spoke to John after class, but ___ did not understand ___ message clearly.</div>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q1" value="A">
+                    <span>him / her</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="B">
+                    <span>he / she</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="C" data-correct="true">
+                    <span>he / her</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="D">
+                    <span>his / hers</span>
+                </label>
+            </div>
+            <div class="explanation">
+                <strong>Your answer:</strong> <span class="user-answer"></span><br>
+                <span class="correct">Correct answer: he / her</span><br><br>
+                <strong>Why:</strong> First blank = SUBJECT pronoun (he does action). Second blank = possessive ADJECTIVE before noun (her message).<br><br>
+                <strong>Examples:</strong><br>
+                - He read her email<br>
+                - She answered his call<br>
+                - They understood our question
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question" data-question="2">
+            <div class="question-number">Question 2</div>
+            <div class="question-text">This jacket is not ___, because ___ is still in my car today.</div>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q2" value="A">
+                    <span>my / my</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="B">
+                    <span>me / mine</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="C" data-correct="true">
+                    <span>mine / mine</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="D">
+                    <span>mine / my</span>
+                </label>
+            </div>
+            <div class="explanation">
+                <strong>Your answer:</strong> <span class="user-answer"></span><br>
+                <span class="correct">Correct answer: mine / mine</span><br><br>
+                <strong>Why:</strong> Both blanks need possessive PRONOUN (stands alone). "Is not mine" / "mine is" - no noun after!<br><br>
+                <strong>Examples:</strong><br>
+                - This is not mine. Mine is new<br>
+                - That's not yours. Yours is red<br>
+                - It's not his. His is bigger
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question" data-question="3">
+            <div class="question-number">Question 3</div>
+            <div class="question-text">Sarah likes her new job, but ___ says ___ manager is very strict.</div>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q3" value="A">
+                    <span>her / she</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="B" data-correct="true">
+                    <span>she / her</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="C">
+                    <span>she / her</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="D">
+                    <span>hers / she</span>
+                </label>
+            </div>
+            <div class="explanation">
+                <strong>Your answer:</strong> <span class="user-answer"></span><br>
+                <span class="correct">Correct answer: she / her</span><br><br>
+                <strong>Why:</strong> First blank = SUBJECT pronoun (she does action "says"). Second blank = possessive ADJECTIVE before noun (her manager).<br><br>
+                <strong>Examples:</strong><br>
+                - She likes her boss<br>
+                - He loves his team<br>
+                - They enjoy their work
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question" data-question="4">
+            <div class="question-number">Question 4</div>
+            <div class="question-text">I sent the documents to Mark, but ___ did not reply to ___ email.</div>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q4" value="A">
+                    <span>him / my</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q4" value="B" data-correct="true">
+                    <span>he / my</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q4" value="C">
+                    <span>his / mine</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q4" value="D">
+                    <span>he / I</span>
+                </label>
+            </div>
+            <div class="explanation">
+                <strong>Your answer:</strong> <span class="user-answer"></span><br>
+                <span class="correct">Correct answer: he / my</span><br><br>
+                <strong>Why:</strong> First blank = SUBJECT pronoun (he does action). Second blank = possessive ADJECTIVE before noun (my email).<br><br>
+                <strong>Examples:</strong><br>
+                - He answered my message<br>
+                - She read my letter<br>
+                - They ignored my calls
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question" data-question="5">
+            <div class="question-number">Question 5</div>
+            <div class="question-text">The children forgot ___ backpacks, so ___ parents had to return home.</div>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q5" value="A">
+                    <span>them / they</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q5" value="B">
+                    <span>theirs / their</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q5" value="C" data-correct="true">
+                    <span>their / their</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q5" value="D">
+                    <span>they / them</span>
+                </label>
+            </div>
+            <div class="explanation">
+                <strong>Your answer:</strong> <span class="user-answer"></span><br>
+                <span class="correct">Correct answer: their / their</span><br><br>
+                <strong>Why:</strong> Both blanks need possessive ADJECTIVE before nouns (their backpacks / their parents). Use "their" before both!<br><br>
+                <strong>Examples:</strong><br>
+                - Their bags are heavy<br>
+                - Their parents are nice<br>
+                - Their house is big
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question" data-question="6">
+            <div class="question-number">Question 6</div>
+            <div class="question-text">That seat is not ___, because ___ is already taken near the window.</div>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q6" value="A">
+                    <span>your / your</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q6" value="B">
+                    <span>you / yours</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q6" value="C" data-correct="true">
+                    <span>yours / yours</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q6" value="D">
+                    <span>your / you</span>
+                </label>
+            </div>
+            <div class="explanation">
+                <strong>Your answer:</strong> <span class="user-answer"></span><br>
+                <span class="correct">Correct answer: yours / yours</span><br><br>
+                <strong>Why:</strong> Both blanks need possessive PRONOUN (stands alone). "Is not yours" / "yours is" - no noun after!<br><br>
+                <strong>Examples:</strong><br>
+                - This is not yours. Yours is there<br>
+                - That's not mine. Mine is here<br>
+                - It's not his. His is outside
+            </div>
+        </div>
+
+        <!-- Part 2: Fill in the Blanks Paragraph -->
+        <div class="paragraph-section">
+            <h2>Part 2 - Fill in the Blanks (Questions 7-12)</h2>
+            <p style="font-size: 16px; margin-bottom: 20px; color: #54595F;">Complete the paragraph by selecting the correct pronouns from the dropdowns.</p>
+
+            <div class="paragraph-content">
+                <p>
+                    Yesterday, John and Sarah went to the office early because
+                    <select class="inline-select" name="q7" data-question="7">
+                        <option value="">?</option>
+                        <option value="A">he</option>
+                        <option value="B">she</option>
+                        <option value="C" data-correct="true">they</option>
+                        <option value="D">them</option>
+                    </select>
+                    had an important meeting. John brought
+                    <select class="inline-select" name="q8" data-question="8">
+                        <option value="">?</option>
+                        <option value="A">him</option>
+                        <option value="B" data-correct="true">his</option>
+                        <option value="C">he</option>
+                        <option value="D">hers</option>
+                    </select>
+                    laptop, but Sarah forgot
+                    <select class="inline-select" name="q9" data-question="9">
+                        <option value="">?</option>
+                        <option value="A">her</option>
+                        <option value="B" data-correct="true">hers</option>
+                        <option value="C">she</option>
+                        <option value="D">his</option>
+                    </select>
+                    at home. The manager spoke to
+                    <select class="inline-select" name="q10" data-question="10">
+                        <option value="">?</option>
+                        <option value="A">they</option>
+                        <option value="B" data-correct="true">them</option>
+                        <option value="C">their</option>
+                        <option value="D">theirs</option>
+                    </select>
+                    about the project and asked
+                    <select class="inline-select" name="q11" data-question="11">
+                        <option value="">?</option>
+                        <option value="A">they</option>
+                        <option value="B" data-correct="true">them</option>
+                        <option value="C">their</option>
+                        <option value="D">theirs</option>
+                    </select>
+                    to finish it by Friday. At the end of the meeting, the documents were
+                    <select class="inline-select" name="q12" data-question="12">
+                        <option value="">?</option>
+                        <option value="A">they</option>
+                        <option value="B">them</option>
+                        <option value="C">their</option>
+                        <option value="D" data-correct="true">theirs</option>
+                    </select>, not the manager's.
+                </p>
+            </div>
+        </div>
+
+        <!-- Explanations for Questions 7-12 -->
+        <div style="margin-top: 30px;">
+            <h3 style="color: #0D214D; margin-bottom: 20px;">Explanations for Questions 7-12</h3>
+
+            <div class="question" data-question="7" style="border-left-color: #e0e0e0;">
+                <div class="question-number">Question 7</div>
+                <div class="explanation">
+                    <span class="correct">Correct answer: they</span><br><br>
+                    <strong>Why:</strong> "John and Sarah" = two people (plural). Subject pronoun = "they" (does the action "had").<br><br>
+                    <strong>Examples:</strong><br>
+                    - They work together<br>
+                    - They live nearby<br>
+                    - They study English
+                </div>
+            </div>
+
+            <div class="question" data-question="8" style="border-left-color: #e0e0e0;">
+                <div class="question-number">Question 8</div>
+                <div class="explanation">
+                    <span class="correct">Correct answer: his</span><br><br>
+                    <strong>Why:</strong> Need possessive ADJECTIVE before noun "laptop". His + noun (NOT "hers" which is possessive pronoun).<br><br>
+                    <strong>Examples:</strong><br>
+                    - His computer is new<br>
+                    - His phone is old<br>
+                    - His car is fast
+                </div>
+            </div>
+
+            <div class="question" data-question="9" style="border-left-color: #e0e0e0;">
+                <div class="question-number">Question 9</div>
+                <div class="explanation">
+                    <span class="correct">Correct answer: hers</span><br><br>
+                    <strong>Why:</strong> Need possessive PRONOUN (stands alone, no noun after). "Forgot hers" = forgot her laptop.<br><br>
+                    <strong>Examples:</strong><br>
+                    - She forgot hers<br>
+                    - He lost his<br>
+                    - They brought theirs
+                </div>
+            </div>
+
+            <div class="question" data-question="10" style="border-left-color: #e0e0e0;">
+                <div class="question-number">Question 10</div>
+                <div class="explanation">
+                    <span class="correct">Correct answer: them</span><br><br>
+                    <strong>Why:</strong> After preposition "to", use OBJECT pronoun! "Spoke to them" (NOT "to they").<br><br>
+                    <strong>Examples:</strong><br>
+                    - He spoke to them<br>
+                    - She talked to them<br>
+                    - I listened to them
+                </div>
+            </div>
+
+            <div class="question" data-question="11" style="border-left-color: #e0e0e0;">
+                <div class="question-number">Question 11</div>
+                <div class="explanation">
+                    <span class="correct">Correct answer: them</span><br><br>
+                    <strong>Why:</strong> After verb "asked", use OBJECT pronoun! "Asked them" (NOT "asked they").<br><br>
+                    <strong>Examples:</strong><br>
+                    - She asked them<br>
+                    - He told them<br>
+                    - I helped them
+                </div>
+            </div>
+
+            <div class="question" data-question="12" style="border-left-color: #e0e0e0;">
+                <div class="question-number">Question 12</div>
+                <div class="explanation">
+                    <span class="correct">Correct answer: theirs</span><br><br>
+                    <strong>Why:</strong> Need possessive PRONOUN (stands alone). "Were theirs" = were their documents (no noun after).<br><br>
+                    <strong>Examples:</strong><br>
+                    - The books are theirs<br>
+                    - The car is ours<br>
+                    - The house is mine
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button onclick="checkAnswers()">Check Answers</button>
+            <button onclick="refreshQuiz()">Refresh Quiz</button>
+        </div>
+
+        <div id="score"></div>
+    </div>
+
+    <div class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.getElementById('mainNav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+
+            if (nav && menuBtn && !nav.contains(event.target) && !menuBtn.contains(event.target)) {
+                nav.classList.remove('active');
+            }
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                const nav = document.getElementById('mainNav');
+                if (nav) nav.classList.remove('active');
+            });
+        });
+
+        // Show/hide back to top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function checkAnswers() {
+            let score = 0;
+            const totalQuestions = 12;
+
+            // Check multiple choice questions (1-6)
+            for (let i = 1; i <= 6; i++) {
+                const question = document.querySelector(`[data-question="${i}"]`);
+                const explanation = question.querySelector('.explanation');
+                let userAnswer = '';
+                let isCorrect = false;
+
+                // Remove previous answer highlighting
+                question.querySelectorAll('.option').forEach(opt => {
+                    opt.classList.remove('correct-answer', 'incorrect-answer');
+                });
+
+                const selectedRadio = question.querySelector('input[type="radio"]:checked');
+                if (selectedRadio) {
+                    userAnswer = selectedRadio.parentElement.querySelector('span').textContent.trim();
+                    isCorrect = selectedRadio.hasAttribute('data-correct');
+
+                    // Highlight the selected option
+                    const selectedOption = selectedRadio.closest('.option');
+                    if (isCorrect) {
+                        selectedOption.classList.add('correct-answer');
+                    } else {
+                        selectedOption.classList.add('incorrect-answer');
+                    }
+                }
+
+                if (isCorrect) {
+                    score++;
+                    explanation.classList.remove('show');
+                } else if (userAnswer !== '') {
+                    explanation.classList.add('show');
+                    explanation.querySelector('.user-answer').textContent = userAnswer;
+                }
+            }
+
+            // Check dropdown questions (7-12)
+            for (let i = 7; i <= 12; i++) {
+                const selectInput = document.querySelector(`select[name="q${i}"]`);
+                const explanationQuestion = document.querySelector(`[data-question="${i}"].question`);
+                const explanation = explanationQuestion ? explanationQuestion.querySelector('.explanation') : null;
+
+                // Remove previous answer highlighting
+                selectInput.classList.remove('correct-answer', 'incorrect-answer');
+
+                const selectedOption = selectInput.options[selectInput.selectedIndex];
+                const userAnswer = selectedOption.text;
+                const isCorrect = selectedOption.hasAttribute('data-correct');
+
+                if (selectedOption.value !== '') {
+                    if (isCorrect) {
+                        selectInput.classList.add('correct-answer');
+                        score++;
+                        if (explanation) explanation.classList.remove('show');
+                    } else {
+                        selectInput.classList.add('incorrect-answer');
+                        if (explanation) explanation.classList.add('show');
+                    }
+                }
+            }
+
+            const scoreElement = document.getElementById('score');
+            scoreElement.textContent = `Score: ${score}/${totalQuestions}`;
+            scoreElement.style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function refreshQuiz() {
+            // Reset radio buttons
+            document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.checked = false;
+            });
+
+            // Reset dropdowns
+            document.querySelectorAll('select').forEach(select => {
+                select.selectedIndex = 0;
+                select.classList.remove('correct-answer', 'incorrect-answer');
+            });
+
+            // Hide explanations
+            document.querySelectorAll('.explanation').forEach(exp => {
+                exp.classList.remove('show');
+            });
+
+            // Remove option highlighting
+            document.querySelectorAll('.option').forEach(opt => {
+                opt.classList.remove('correct-answer', 'incorrect-answer');
+            });
+
+            // Hide score
+            document.getElementById('score').style.display = 'none';
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
